@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+ _____          _        _____                       _ _
+|_   _|        | |      /  __ \                     | | |
+  | | _ __  ___| |_ __ _| /  \/ ___  _ __  ___ _   _| | |_
+  | || '_ \/ __| __/ _` | |    / _ \| '_ \/ __| | | | | __|
+ _| || | | \__ \ || (_| | \__/\ (_) | | | \__ \ |_| | | |_
+ \___/_| |_|___/\__\__,_|\____/\___/|_| |_|___/\__,_|_|\__|
+
+
+If you are are reading this then we are looking for techies like you. Send us a mail with subject [Career]
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a href="#">InstaConsult</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+
+				<li><a href="index.html#top" accesskey="2" title="">How it Works</a></li>
+
+				<li><a href="#" accesskey="5" title="">About Us</a></li>
+				<li><a href="#" accesskey="6" title="">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+
+	<div id="banner">
+		<div class="container">
+
+
+<h1> Become an InstaConsultant.</h1>
+<h3> Register with us and gain access to a stream of projects with fast-growing companies and global brands.</h3>
+
+<br/>
+<div class="form">
+
+
+      <div class="tab-content">
+        <div id="signup">
+
+          <form  id="insta-sign" action="process1.php" title="" method="post">
+
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label><br/>
+              <input type="text" class="rounded" required autocomplete="off" name="first_name"/>
+            </div>
+
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label><br/>
+              <input type="text"required autocomplete="off" class="rounded" name="last_name"/>
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Email <span class="req">*</span>
+            </label><br/>
+            <input type="email"required autocomplete="off" class="rounded" name="email_id"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label><br/>
+            <input type="password"required autocomplete="off" class="rounded" name="password"/>
+          </div>
+<input type="submit" class="button" value="Get Started">
+          <!-- <button type="submit" class="button"/>Get Started</button> -->
+</input>
+          </form>
+
+        </div>
+
+
+
+      </div><!-- tab-content -->
+
+</div> <!-- /form -->
+
+
+
+
+
+		</div>
+	</div>
+
+
+
+</div>
+<div id="copyright" class="container">
+	<p>&copy; InstaConsult |<a href="#" >About</a> | <a href="#" >Contact</a> | <a href="#" >FAQ</a> |<a href="#" >Terms of service</a> | <a href="#" >Services of contract policy</a> |  <a href="#" >Become an InstaConsultant</a> |</p>
+</div>
+
+
+<script type='text/javascript'>
+    /* attach a submit handler to the form */
+    $("#insta-sign").submit(function(event) {
+
+      /* stop form from submitting normally */
+      event.preventDefault();
+
+      /* get some values from elements on the page: */
+      var $form = $( this ),
+          url = $form.attr( 'action' );
+
+      /* Send the data using post */
+      var posting = $.post( url, { first_name: $('#first_name').val(), last_name: $('#last_name').val(), email: $('#email').val(), pass: $('#pass').val() } );
+
+      /* Alerts the results */
+      posting.done(function( data ) {
+        alert('success');
+      });
+    });
+</script>
+
+</body>
+</html>

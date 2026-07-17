@@ -1,0 +1,7 @@
+{
+    "require": {
+        "namshi/jose": "2.1.*",
+        "firebase/php-jwt": "~2.0"
+       
+    }
+}
