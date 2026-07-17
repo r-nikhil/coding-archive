@@ -1,0 +1,16 @@
+{
+    "name": "HelloBuddy",
+    "version": "1",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "scripts": ["content.js"]
+    },
+	"content_scripts": [ {
+  "matches": ["<all_urls>"],
+  "js": ["content.js"]
+} ],
+    "permissions": ["tabs"],
+    "manifest_version": 2
+}

@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Tweets Results</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Top Tweets by Account</h1>
+        
+        <div class="mb-3">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">← Back</a>
+        </div>
+
+        {% for account, acc_tweets in tweets|groupby('username') %}
+        <div class="account-section mb-4">
+            <h2 class="h4 mb-3">@{{ account }}</h2>
+            {% for tweet in acc_tweets|sort(attribute='engagement_score', reverse=true) %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <p class="card-text">{{ tweet.text }}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="engagement-stats">
+                            <span class="badge bg-primary me-2">❤️ {{ tweet.likes }}</span>
+                            <span class="badge bg-success me-2">🔄 {{ tweet.retweets }}</span>
+                            <span class="badge bg-info">💬 {{ tweet.replies }}</span>
+                        </div>
+                        <div class="engagement-score">
+                            <span class="badge bg-secondary">Score: {{ tweet.engagement_score }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

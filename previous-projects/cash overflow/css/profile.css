@@ -1,0 +1,39 @@
+.bordered-box{
+	background-color: #fff;
+	border: 1px solid #ddd;
+	min-height: 100px;
+}
+.row{
+	margin-bottom: 20px;
+}
+.header{
+	border-bottom: 2px solid #eee; 
+	margin-bottom:20px;
+}
+.nav-tabs > li > a{
+		border: none!important;
+	}
+.nav-tabs{
+	background: linear-gradient(white, #ddd);
+}
+.no-padding{
+	padding: 0;
+}
+.has-img-rollover{
+	overflow: hidden;
+	position: relative;
+}
+.img-rollover{
+	background: linear-gradient(transparent, rgba(0, 0, 0, 1) );
+	color: white;
+	height: 100%;
+	position: absolute;
+	bottom: -100%;
+	transition: bottom 500ms;
+	width: 92%;
+	padding: 0 5px;
+}
+.has-img-rollover:hover .img-rollover{
+	bottom: 0;
+
+}

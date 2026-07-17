@@ -1,0 +1,22 @@
+input {
+	position: relative;
+	top: 3px;
+}	
+h2.make-bold{
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.dot-divided{
+	margin: 0;
+	padding: 15px 0;
+	padding-bottom: 24px;
+	border-bottom: 1px dotted #ddd;
+}
+.row-group{
+	border: 1px solid #ddd;
+	background-color: white;
+	margin-bottom: 20px;
+}
+.make-bold{
+	font-weight: bold;
+}

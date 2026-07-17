@@ -1,0 +1,174 @@
+/*
+	nav bar link color = #3A6DAC;
+*/
+body{
+	padding-top:100px;
+}
+body,
+#main-box{
+	background-color: #F0F0F0;
+	margin-bottom:200px;
+	width:100%;
+	box-shadow: 0 15px 15px -15px rgba(0,0,0,.5);
+}
+
+
+/*nav-bar*/
+	#main-nav{
+		z-index: 1;
+		padding:5px 0;
+		background-color:white;
+		box-shadow: 0 0 5px grey;
+	}
+
+	#main-nav a:not(.btn){
+		color:#3A6DAC;
+	}
+
+	#navbar a:hover{
+		background-color:#eee;
+	}
+
+
+
+#notif-count{
+	padding-left: 1px;
+	vertical-align: top;
+	color: white;
+	background: linear-gradient(#f00, #a00 200%);
+	display: inline-block;
+	text-align:center;
+}
+
+/*removes gradient and makes btn flat*/
+.make-flat{
+	border-radius:0;
+	border:none;
+	background-image:none;
+}
+
+#message{
+	min-height:300px;
+	resize: vertical;
+}
+
+
+
+
+
+@media only screen and (min-width: 1000px){
+	
+	.container{
+		/*width:80%;*/
+	}
+}
+@media only screen and (min-width: 755px) and (max-width: 991px){
+	*{
+		/*topbar goes away*/
+	}
+}
+
+
+
+
+
+
+/*footer*/
+	#footer-region{
+		height: 200px;
+		bottom:0;
+		width:100%;
+		position:fixed;
+		z-index:-1;
+
+		color:white;
+		background: repeating-linear-gradient(	-45deg,
+																						rgba(255,255,255,0.15), 
+																						rgba(255,255,255,0.15) 10px, 
+																						rgba(255,255,255,0.10) 10px, 
+																						rgba(255,255,255,0.10) 20px),
+								#4B7C59;
+	}
+	footer{
+		padding-top:30px;
+		padding-bottom:10px;
+		background:rgba(0,0,0,0.0);
+	}
+	footer > div{
+		padding:5px;
+	}
+	footer div ul li{
+		vertical-align:middle;
+		color:rgba(255,255,255,0.6);
+	}
+/*755-980*/
+
+
+
+
+
+li.notifs{
+	position: relative;
+	padding: 20px 20px 0;
+	margin: 2px 0;
+	cursor: pointer;
+}
+li.notifs::after{
+	display: block;
+	margin: auto;
+	width: 90%;
+	content: "";
+	left: 0;
+	margin-top: 20px;
+	border-bottom:  1px dotted #ccc ;
+
+}
+li.notifs:hover{
+	background-color: #eee;
+}
+
+
+
+/*modal*/
+	#mdl-cover{
+		height: 0;
+		background-color: rgba(0, 0, 0, 0);
+
+		width: 100%;
+		position: fixed;
+		transition: background-color 360ms ease-out;
+		z-index: 2;
+		top: 0;
+	}
+	#modal{
+		transform: translateY(-110%);
+
+		background: white;
+		border-radius: 0 0 5px 5px;
+		border: 5px solid #3A6DAC;
+		box-shadow: 0 50px 50px -50px black;
+		height: 500px;
+		margin: auto;
+		min-width: 500px;
+		position: relative;
+		transition: transform 360ms;
+		width: 50%;
+	}
+	#mdl-heading{
+		background: #3A6DAC;
+		color: white;
+		padding: 5px 10px 10px;
+	}
+	#mdl-heading h2{
+		margin: 0;
+		padding:0;
+	}
+	#mdl-hide-span{
+		cursor:pointer;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+	}
+	#mdl-hide-span:hover{
+		color: #eee;
+	}

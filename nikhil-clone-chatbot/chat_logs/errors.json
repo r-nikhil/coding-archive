@@ -1,0 +1,7 @@
+[
+  {
+    "timestamp": "2025-07-08T09:27:56.361100",
+    "user_ip": "127.0.0.1",
+    "error": "unsupported operand type(s) for +=: 'NoneType' and 'int'"
+  }
+]

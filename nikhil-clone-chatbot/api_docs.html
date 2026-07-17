@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil's AI Chatbot API Documentation</title>
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #1a1a1a; color: #e0e0e0; }
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem 0; margin-bottom: 2rem; }
+        .endpoint { border-left: 4px solid #667eea; padding-left: 1rem; margin: 1.5rem 0; }
+        .method-get { border-left-color: #28a745; }
+        .method-post { border-left-color: #007bff; }
+        .method-delete { border-left-color: #dc3545; }
+        .method-put { border-left-color: #ffc107; }
+        .code-block { background: #2d3748; border-radius: 8px; padding: 1rem; margin: 1rem 0; overflow-x: auto; }
+        .badge { font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; }
+        .badge-get { background-color: #28a745; }
+        .badge-post { background-color: #007bff; }
+        .badge-delete { background-color: #dc3545; }
+        .badge-put { background-color: #ffc107; color: #000; }
+        .response-example { background: #1a202c; border-radius: 8px; padding: 1rem; margin: 0.5rem 0; }
+        .toc { position: sticky; top: 2rem; }
+        .feature-card { background: #2d3748; border-radius: 8px; padding: 1.5rem; margin: 1rem 0; }
+    </style>
+</head>
+<body>
+    <div class="hero text-center text-white">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Nikhil's AI Chatbot API</h1>
+            <p class="lead">Comprehensive Flask backend with RAG, conversation history, webhooks, and admin panel</p>
+            <p class="mb-0">
+                <span class="badge bg-success">v1.0.0</span>
+                <span class="badge bg-info ms-2">Production Ready</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="toc">
+                    <h5>Quick Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#overview" class="text-decoration-none">Overview</a></li>
+                        <li><a href="#authentication" class="text-decoration-none">Authentication</a></li>
+                        <li><a href="#core-api" class="text-decoration-none">Core Chat API</a></li>
+                        <li><a href="#conversations" class="text-decoration-none">Conversations</a></li>
+                        <li><a href="#analytics" class="text-decoration-none">Analytics</a></li>
+                        <li><a href="#admin" class="text-decoration-none">Admin Panel</a></li>
+                        <li><a href="#webhooks" class="text-decoration-none">Webhooks</a></li>
+                        <li><a href="#examples" class="text-decoration-none">Examples</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-9">
+                <section id="overview">
+                    <h2>Overview</h2>
+                    <p>This API provides a comprehensive chatbot backend that combines Retrieval-Augmented Generation (RAG) with OpenAI's GPT-4o to deliver personalized responses about AI, investing, poker, and other topics based on blog content.</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <h5>🤖 Core Features</h5>
+                                <ul>
+                                    <li>RAG with ChromaDB embeddings</li>
+                                    <li>Conversation history management</li>
+                                    <li>Real-time webhook notifications</li>
+                                    <li>Content filtering & rate limiting</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <h5>🛠 Technical Stack</h5>
+                                <ul>
+                                    <li>Flask with CORS support</li>
+                                    <li>OpenAI GPT-4o & embeddings</li>
+                                    <li>ChromaDB vector database</li>
+                                    <li>Bootstrap admin panel</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <strong>Base URL:</strong> <code>https://llm-chat-backend-NikhilR24.replit.app</code>
+                    </div>
+                </section>
+
+                <section id="authentication">
+                    <h2>Authentication</h2>
+                    <p>Most endpoints are public, but admin panel requires token-based authentication:</p>
+                    
+                    <div class="endpoint method-post">
+                        <h4>Admin Login</h4>
+                        <span class="badge badge-post">POST</span> <code>/admin/login</code>
+                    </div>
+
+                    <div class="code-block">
+<pre><code>{
+  "token": "your-admin-token"
+}</code></pre>
+                    </div>
+
+                    <p>For admin access, include the token in the Authorization header:</p>
+                    <div class="code-block">
+<pre><code>Authorization: Bearer your-admin-token</code></pre>
+                    </div>
+                </section>
+
+                <section id="core-api">
+                    <h2>Core Chat API</h2>
+                    
+                    <div class="endpoint method-get">
+                        <h4>API Information</h4>
+                        <span class="badge badge-get">GET</span> <code>/</code>
+                        <p>Returns API overview, endpoints, and features</p>
+                    </div>
+
+                    <div class="response-example">
+                        <strong>Response Example:</strong>
+<pre><code>{
+  "message": "Nikhil's AI-Powered Chatbot Backend",
+  "description": "Flask backend with RAG capabilities...",
+  "api_endpoints": {
+    "chat": "POST /api/chat - Main chat interface",
+    "health": "GET /api/health - System health check"
+  },
+  "features": [...],
+  "version": "1.0.0",
+  "status": "operational"
+}</code></pre>
+                    </div>
+
+                    <div class="endpoint method-get">
+                        <h4>Health Check</h4>
+                        <span class="badge badge-get">GET</span> <code>/api/health</code>
+                        <p>Monitor system health and service status</p>
+                    </div>
+
+                    <div class="response-example">
+                        <strong>Response Example:</strong>
+<pre><code>{
+  "status": "healthy",
+  "timestamp": "2025-07-08T09:19:32.123456",
+  "services": {
+    "rag": true,
+    "openai": true,
+    "analytics": true,
+    "conversation_history": true,
+    "webhook_service": true
+  }
+}</code></pre>
+                    </div>
+
+                    <div class="endpoint method-post">
+                        <h4>Chat Interface</h4>
+                        <span class="badge badge-post">POST</span> <code>/api/chat</code>
+                        <p>Main chat endpoint with conversation history support</p>
+                    </div>
+
+                    <h5>Request Parameters:</h5>
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>message</td>
+                                <td>string</td>
+                                <td>Yes</td>
+                                <td>User's chat message (max 1000 chars)</td>
+                            </tr>
+                            <tr>
+                                <td>conversation_id</td>
+                                <td>string</td>
+                                <td>No</td>
+                                <td>Existing conversation ID (auto-generated if not provided)</td>
+                            </tr>
+                            <tr>
+                                <td>timestamp</td>
+                                <td>string</td>
+                                <td>No</td>
+                                <td>ISO 8601 timestamp (auto-generated if not provided)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="code-block">
+<pre><code>{
+  "message": "Tell me about your experience with AI and investing",
+  "conversation_id": "optional-existing-id",
+  "timestamp": "2025-07-08T09:20:00Z"
+}</code></pre>
+                    </div>
+
+                    <div class="response-example">
+                        <strong>Response Example:</strong>
+<pre><code>{
+  "response": "Based on my experience at Accel as an AI resident...",
+  "timestamp": "2025-07-08T09:20:01.234567",
+  "conversation_id": "abc123-def456-ghi789"
+}</code></pre>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <strong>Rate Limits:</strong>
+                        <ul class="mb-0">
+                            <li>10 requests per minute per IP</li>
+                            <li>10 chats per user session</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="conversations">
+                    <h2>Conversation Management</h2>
+                    
+                    <div class="endpoint method-get">
+                        <h4>Get Specific Conversation</h4>
+                        <span class="badge badge-get">GET</span> <code>/api/conversation/{conversation_id}</code>
+                        <p>Retrieve complete conversation history by ID</p>
+                    </div>
+
+                    <div class="response-example">
+                        <strong>Response Example:</strong>
+<pre><code>{
+  "conversation_id": "abc123-def456-ghi789",
+  "user_ip": "127.0.0.1",
+  "created_at": "2025-07-08T09:16:35.199715",
+  "messages": [
+    {
+      "timestamp": "2025-07-08T09:16:35Z",
+      "user_message": "Tell me about your poker background",
+      "bot_response": "I played poker professionally from 2018 to 2021...",
+      "message_id": "msg-001"
+    }
+  ],
+  "metadata": {
+    "total_messages": 1,
+    "last_activity": "2025-07-08T09:16:35Z"
+  }
+}</code></pre>
+                    </div>
+
+                    <div class="endpoint method-get">
+                        <h4>Get Recent Conversations</h4>
+                        <span class="badge badge-get">GET</span> <code>/api/conversations/recent?limit=10</code>
+                        <p>Retrieve list of recent conversations</p>
+                    </div>
+
+                    <h5>Query Parameters:</h5>
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Type</th>
+                                <th>Default</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>limit</td>
+                                <td>integer</td>
+                                <td>10</td>
+                                <td>Number of conversations to return</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="analytics">
+                    <h2>Analytics</h2>
+                    
+                    <div class="endpoint method-get">
+                        <h4>Analytics Summary</h4>
+                        <span class="badge badge-get">GET</span> <code>/api/analytics/summary</code>
+                        <p>Get comprehensive analytics data</p>
+                    </div>
+
+                    <div class="response-example">
+                        <strong>Response Example:</strong>
+<pre><code>{
+  "total_chats": 6,
+  "unique_users": 2,
+  "error_count": 0,
+  "daily_stats": {
+    "2025-07-08": {
+      "chats": 6,
+      "unique_users": 2
+    }
+  },
+  "popular_topics": {
+    "AI": 4,
+    "poker": 3,
+    "investing": 2
+  }
+}</code></pre>
+                    </div>
+                </section>
+
+                <section id="admin">
+                    <h2>Admin Panel</h2>
+                    <p>Web-based administration interface with authentication</p>
+
+                    <div class="endpoint method-get">
+                        <h4>Admin Login Page</h4>
+                        <span class="badge badge-get">GET</span> <code>/admin/login</code>
+                        <p>Bootstrap-styled login interface</p>
+                    </div>
+
+                    <div class="endpoint method-get">
+                        <h4>Admin Dashboard</h4>
+                        <span class="badge badge-get">GET</span> <code>/admin/dashboard</code>
+                        <p>Real-time system monitoring dashboard (requires authentication)</p>
+                    </div>
+
+                    <div class="endpoint method-get">
+                        <h4>Admin API - System Stats</h4>
+                        <span class="badge badge-get">GET</span> <code>/admin/api/stats</code>
+                        <p>Detailed system statistics (requires authentication)</p>
+                    </div>
+
+                    <div class="endpoint method-post">
+                        <h4>Reload System Prompt</h4>
+                        <span class="badge badge-post">POST</span> <code>/admin/api/system/reload-prompt</code>
+                        <p>Reload system prompt from file (requires authentication)</p>
+                    </div>
+                </section>
+
+                <section id="webhooks">
+                    <h2>Webhooks</h2>
+                    <p>Real-time event notifications for integrations</p>
+
+                    <h5>Supported Events:</h5>
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>Event</th>
+                                <th>Description</th>
+                                <th>Payload</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>new_message</td>
+                                <td>New chat message received</td>
+                                <td>conversation_id, user_ip, message, response, timestamp</td>
+                            </tr>
+                            <tr>
+                                <td>message_filtered</td>
+                                <td>Message blocked by content filter</td>
+                                <td>user_ip, message, reason</td>
+                            </tr>
+                            <tr>
+                                <td>error</td>
+                                <td>System error occurred</td>
+                                <td>error, user_ip, timestamp</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="endpoint method-post">
+                        <h4>Configure Webhooks</h4>
+                        <span class="badge badge-post">POST</span> <code>/admin/api/webhooks</code>
+                        <p>Add new webhook endpoints (requires authentication)</p>
+                    </div>
+
+                    <div class="code-block">
+<pre><code>{
+  "url": "https://your-app.com/webhook",
+  "events": ["new_message", "error"],
+  "secret": "optional-hmac-secret",
+  "name": "My Integration"
+}</code></pre>
+                    </div>
+
+                    <h5>Webhook Payload Example:</h5>
+                    <div class="response-example">
+<pre><code>{
+  "event": "new_message",
+  "timestamp": "2025-07-08T09:20:00Z",
+  "data": {
+    "conversation_id": "abc123-def456",
+    "user_ip": "127.0.0.1",
+    "message": "Hello!",
+    "response": "Hi there! How can I help you?",
+    "timestamp": "2025-07-08T09:20:00Z"
+  }
+}</code></pre>
+                    </div>
+                </section>
+
+                <section id="examples">
+                    <h2>Usage Examples</h2>
+
+                    <h4>JavaScript/Frontend Integration</h4>
+                    <div class="code-block">
+<pre><code>// Simple chat implementation
+async function sendMessage(message, conversationId = null) {
+  const response = await fetch('https://llm-chat-backend-NikhilR24.replit.app/api/chat', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      message: message,
+      conversation_id: conversationId,
+      timestamp: new Date().toISOString()
+    })
+  });
+  
+  const data = await response.json();
+  return data;
+}
+
+// Usage
+sendMessage("Tell me about AI in investing")
+  .then(response => {
+    console.log('Bot response:', response.response);
+    console.log('Conversation ID:', response.conversation_id);
+  });</code></pre>
+                    </div>
+
+                    <h4>Python Integration</h4>
+                    <div class="code-block">
+<pre><code>import requests
+from datetime import datetime
+
+def chat_with_nikhil(message, conversation_id=None):
+    url = "https://llm-chat-backend-NikhilR24.replit.app/api/chat"
+    payload = {
+        "message": message,
+        "timestamp": datetime.now().isoformat()
+    }
+    
+    if conversation_id:
+        payload["conversation_id"] = conversation_id
+    
+    response = requests.post(url, json=payload)
+    return response.json()
+
+# Usage
+result = chat_with_nikhil("What's your poker background?")
+print(f"Response: {result['response']}")
+print(f"Conversation ID: {result['conversation_id']}")</code></pre>
+                    </div>
+
+                    <h4>cURL Examples</h4>
+                    <div class="code-block">
+<pre><code># Health check
+curl https://llm-chat-backend-NikhilR24.replit.app/api/health
+
+# Send chat message
+curl -X POST https://llm-chat-backend-NikhilR24.replit.app/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "message": "Tell me about your AI experience at Accel",
+    "timestamp": "2025-07-08T12:00:00Z"
+  }'
+
+# Get analytics
+curl https://llm-chat-backend-NikhilR24.replit.app/api/analytics/summary</code></pre>
+                    </div>
+                </section>
+
+                <section id="error-handling">
+                    <h2>Error Handling</h2>
+                    
+                    <h5>Common HTTP Status Codes:</h5>
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Description</th>
+                                <th>Common Causes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>200</td>
+                                <td>Success</td>
+                                <td>Request processed successfully</td>
+                            </tr>
+                            <tr>
+                                <td>400</td>
+                                <td>Bad Request</td>
+                                <td>Missing message, empty input, message too long</td>
+                            </tr>
+                            <tr>
+                                <td>401</td>
+                                <td>Unauthorized</td>
+                                <td>Invalid admin token</td>
+                            </tr>
+                            <tr>
+                                <td>404</td>
+                                <td>Not Found</td>
+                                <td>Conversation ID doesn't exist</td>
+                            </tr>
+                            <tr>
+                                <td>429</td>
+                                <td>Rate Limited</td>
+                                <td>Too many requests or daily chat limit reached</td>
+                            </tr>
+                            <tr>
+                                <td>500</td>
+                                <td>Internal Error</td>
+                                <td>Server error, OpenAI API issues</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="response-example">
+                        <strong>Error Response Format:</strong>
+<pre><code>{
+  "error": "Message contains inappropriate content"
+}</code></pre>
+                    </div>
+                </section>
+
+                <div class="mt-5 p-4 bg-secondary rounded">
+                    <h5>Need Help?</h5>
+                    <p class="mb-2">For technical support or questions about the API:</p>
+                    <ul class="mb-0">
+                        <li>Check the <a href="https://llm-chat-backend-NikhilR24.replit.app/api/health" class="text-warning">health endpoint</a> for system status</li>
+                        <li>Review the admin panel for detailed monitoring</li>
+                        <li>Contact: contact@rnikhil.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

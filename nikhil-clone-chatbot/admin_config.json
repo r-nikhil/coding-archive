@@ -1,0 +1,13 @@
+{
+  "admin_token": "OwDV-tAA3D6I-KRDqljJ5Diu4aQfbc1D7uWGDeWoiRA",
+  "created_at": "2025-07-08T09:14:40.926523",
+  "rate_limits": {
+    "requests_per_minute": 10,
+    "chats_per_user": 10
+  },
+  "system_settings": {
+    "max_response_length": 300,
+    "rag_results_count": 3,
+    "conversation_context_length": 5
+  }
+}

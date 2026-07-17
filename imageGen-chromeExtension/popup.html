@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>AI ImageGen</h2>
+    <div class="settings">
+        <label for="api-key">OpenAI API Key:</label>
+        <input type="text" id="api-key" class="input-field" placeholder="Enter your OpenAI API Key">
+        <button id="save-api-key" class="button">Save Key</button>
+        <span id="saved-icon" style="display: none;">✓</span> <!-- Add this line -->
+    </div>
+
+    <div class="prompt-section">
+        <label for="text-prompt">Text Prompt:</label>
+        <input type="text" id="text-prompt" class="input-field" placeholder="Enter text to generate images">
+    </div>
+
+    <div class="actions">
+        <button id="generate-images" class="button">Generate Images</button>
+        <button id="regenerate-images" class="button">Regenerate</button>
+        <button id="download-images" class="button">Download Images</button>
+    </div>
+
+    <div class="image-container" id="image-results">
+        <!-- Generated images will be displayed here -->
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

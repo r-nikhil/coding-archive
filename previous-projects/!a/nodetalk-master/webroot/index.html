@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NodeTalk beta</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link type="text/css" rel="stylesheet" href="style.css">
+		<meta name="Author" content="Longbill" />
+        <script src="js/jquery.js"></script>
+        <script>
+        function init_window()
+        {
+        	$('#main').height($(window).height()-$('#header').height());
+        	$('#content').width($('#chat_window').width()-$('#disconnectwrapper').width()*2-6);
+        	
+			var space = 50;
+			if (navigator.userAgent.match(/msie\s7/i)) space = 50;
+			if (navigator.userAgent.match(/msie\s6/i)) space = 50;
+	
+        	$('#chat_window').height($(window).height()-$('#header').height()-$('#content').height()-space);
+        }
+        init_window();
+        window.onresize = init_window;
+        var lang = 
+        {
+        	send_error:'error',
+        	bye:'Bye!',
+        	online_num:'Onlines: ',
+        	waiting:'Waiting for stranger...',
+        	me:'<span style="color:#333">Me:</span>',
+        	stranger:'<span style="color:#49e">Stranger:</span>',
+        	connected:'<span style="color:orange">Stranger connected. Say hi!</span>',
+        	disconnected:'Stranger disconnected.',
+        	typing:'<span style="font-size:12px;color:#999">Stranger is typing</span>',
+        	reconnect:'Re-connect',
+        	download:'Download',
+        	logining:'Connecting...',
+        	logined:'Connected',
+        	you_disconnect:'You have disconnected',
+        	contact_me:'&nbsp;<a href="http://php.js.cn" target="_blank">Contact webmaster.</a>',
+			new_msg:'New MSG!',
+			serverError: 'Connection error!'
+        };
+        </script>
+        <script src="js/chat.js"></script>
+    </head>
+    <body scroll="no">
+        <div id="header">
+        	<div id="header_content">
+        		<table cellpadding="0" cellspacing="0" border="0">
+        			<tr>
+        				<td><img id="logo"  src="images/logo.jpg" /></td>
+        				<td>
+							
+								
+						
+						</td>
+    	       			<td style="text-align:right" valign="middle">
+    	       				Onlines: <span id="online_num"></span>
+    	       			</td>
+    	       		</tr>
+    	       	</table>
+    	    </div>
+        </div> 
+        <div id="main">
+        	<div id="description" class="main_window" style="display:;">
+        		<div style="width:600px;margin:0 auto;text-align:center;">
+	        		<div style="height:400px;float:left; width:300px;">
+	        			<img src="images/taibei.jpg" />
+	        		</div>
+	        		<div style="height:400px;float:left; width:230px;">
+	        			<div style="margin-top:70px;">
+	        				<img src="images/title.jpg" />
+	        			</div>
+	        			<div style="margin:20px 0;margin-bottom:40px;">
+	        				<a href="javascript:init_chat();"><img src="images/start.jpg" /></a>
+	        			</div>
+	        			
+	        		</div>
+        		</div>
+        		<div id="announcement">
+        			
+NodeTalk is developed by <a href="http://php.js.cn" target="_blank">Longbill</a>
+					
+        		</div>
+        	</div>
+			
+        	<div id="chat" style="display:none">
+        		<div id="chat_window">
+	 			</div>
+        		<div id="chat_bottom">
+        			<div id="disconnectwrapper" onclick="disconnect()">
+        				Disconnect
+        			</div>
+	        			<textarea id="content" ></textarea>
+        			<div id="sendwrapper" onclick="send_bt()" >
+        				Send
+        			</div>
+        		</div>
+        	</div>
+        </div>
+		<script src="/socket.io/socket.io.js"></script>
+    </body>
+</html>

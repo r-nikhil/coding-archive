@@ -1,0 +1,3 @@
+icmp.o: icmp.c config.h
+echotunnel.o: echotunnel.c config.h
+tunnel.o: tunnel.c config.h

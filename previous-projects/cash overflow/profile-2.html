@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>&lt;websitename&gt; | Dashboard</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+
+	<link rel="stylesheet" href="css/datepicker.css">
+	<script src="js/jquery-1.11.1.min.js"></script>
+
+	<link rel="stylesheet" href="css/profile-2.css">
+
+</head>
+<body>
+
+<style type="text/css">
+	.form-group{
+		padding: 5px;
+	}
+	.form-group *:hover{
+		cursor: pointer;
+	}
+	.form-group:hover{
+		background-color: #ddd;
+	}
+	@media only screen and (min-width: 991px){
+		.small{
+			float: right;
+			width:30%;
+		}
+	}
+	@media only screen and (max-width: 991px){
+		.small{
+			float: none!important;
+			width:100%!important	;
+		}
+	}
+</style>
+
+<div id="main-box">
+	<div class="container">
+
+
+		<!-- navigation bar -->
+		<nav id="main-nav" class="navbar navbar-default navbar-fixed-top make-flat">
+		  <div class="container"><!-- centers the content -->
+
+			<!-- ombile-first layout -->
+			<div class="navbar-header">
+			  <button id="hamburger" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">WEBSITEname</a>
+			</div>
+
+			<!-- navbar contents -->
+			<div id="navbar" class="navbar-collapse collapse">
+			  
+			  <!-- right-half of navbar -->
+			  <ul class="nav navbar-nav navbar-right">
+			  
+
+				<!-- menu item-1 -->
+				<li><a href="#">Dashboard</a></li>				
+
+
+				<!-- menu item-2 -->
+				<li><a href="#">Case Studies</a></li>			
+
+
+				<!-- menu item-3 -->
+				<li class="dropdown">											
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Advice <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Ask a pro</a></li>
+					<li class="divider"></li>
+					<li class="dropdown-header">Nav sub-header</li>
+					<li><a href="#">Some more things</a></li>
+				  </ul>
+				</li>
+
+
+				<!-- menu item-4 -->
+				<li><a href="#" class="mdl-show">Help</a></li>							
+
+
+				<!-- menu item-5 -->
+				<li> <a href="#" class="mdl-show"> <span id="notif-count"></span> Notifications </a> </li>
+
+
+				<!-- menu item-6 -->
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> &lt;USER&gt; <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Dashboard</a></li>
+					<li><a href="#">Edit profile</a></li>
+					<li><a href="#">Change password</a></li>
+					<li><a href="#">Logout</a></li>
+				  </ul>
+				</li>
+
+				<!-- menu item-7 -->
+				<li>
+							<div class="btn-group">
+								<a 			type="button" class="btn btn-xs make-flat btn-success navbar-btn" href="#">Post Project</a>
+							  <button type="button" class="btn btn-xs make-flat btn-success navbar-btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+
+								<ul class="dropdown-menu">
+									<li><a href="#">Business Plan</a></li>
+									<li><a href="#">Company Valuation</a></li>
+									<li><a href="#">Competitive Analysis</a></li>
+									<li><a href="#">Financial Projections &amp; Analysis</a></li>
+									<li><a href="#">Market Analysis &amp; Research</a></li>
+									<li><a href="#">Marketing Collateral</a></li>
+									<li><a href="#">Marketing Plan</a></li>
+									<li><a href="#">New Market Entry Plan</a></li>
+									<li><a href="#">Performance Metrics &amp; Benchmarks</a></li>
+									<li><a href="#">Pitch Deck</a></li>
+									<li><a href="#">Pricing Analysis &amp; Advice</a></li>
+									<li><a href="#">Social Media Advisory</a></li>
+									<li><a href="#">Other</a></li>
+								</ul>
+							</div>	
+				</li>
+
+
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+
+
+
+		<!-- Page's heading - Profile -->
+		<div class="row row-group text-center bordered-box">
+			<div class="col-md-12">
+				<h1><span class="fa fa-user"></span>Profile</h1>
+			</div>
+		</div>
+
+
+
+
+		<div class="row">
+		<!-- main block - left side -->
+		<div class="col-md-8">
+
+			<!-- first segment -->
+			<div class="row row-group">
+
+				<!-- profile picture row -->
+				<div class="row dot-divided ">
+					<div class="col-md-3 col-md-offset-1">
+						<img src="img/4.png" class="img-responsive">
+					</div>
+					<div class="col-md-8">
+						<h2 class="make-bold" id="profile-name">Sherlock Holmes</h2>
+						<p>I am looking for:</p>
+						<p>
+							<label class="space" data-space="15px">Fulltime <input type="checkbox" id="looking-for-fulltime"></label>
+							<label class="space" data-space="15px">Interim  <input type="checkbox" id="looking-for-interim"></label>
+							<label class="space" data-space="15px">Project  <input type="checkbox" id="looking-for-project"></label>
+						</p>
+					</div>
+				</div>
+
+				<!-- personal statement row -->
+				<div class="row dot-divided">
+					<div class="col-md-11 col-md-offset-1">
+						<h2 class="make-bold">Personal Statement</h2>
+						<p id="personal-statement">Hello</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- second segment -->
+			<div class="row row-group">
+
+				<!-- Professional Details -->
+				<div class="row dot-divided">
+					<div class="col-md-11 col-md-offset-1">
+						<h2 class="make-bold">Professional Details</h2>
+						<div class="row">
+							<p class="col-md-4 col-xs-6 make-bold"> Languages </p>
+							<p class="col-md-8 col-xs-6" id="languages"> English Hindi </p>
+						</div>
+						<div class="row">
+							<p class="col-md-4 col-xs-6 make-bold">Industry Experience</p>
+							<p class="col-md-8 col-xs-6" id="industry-experience">None specified</p>
+						</div>
+						<div class="row">
+							<p class="col-md-4 col-xs-6 make-bold">Job Function</p>
+							<p class="col-md-8 col-xs-6" id="job-function">None specified</p>
+						</div>
+						<div class="row">
+							<p class="col-md-4 col-xs-6 make-bold">Eligible Countries</p>
+							<p class="col-md-8 col-xs-6" id="eligible-countries">None specified</p>
+						</div>
+						<div class="row">
+							<p class="col-md-4 col-xs-6 make-bold">Keywords</p>
+							<p class="col-md-8 col-xs-6" id="keywords">None specified</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Consulting Rates -->
+				<div class="row dot-divided">
+					<div class="col-md-11 col-md-offset-1">
+						<h2 class="make-bold">Consulting Rates</h2>
+						<div class="row">
+							<p class="col-md-4 col-xs-6 make-bold">Consulting rates</p>
+							<p class="col-md-8 col-xs-6" id="consulting-rates">None specified</p>
+						</div>
+
+						<div class="row">
+							<p class="col-md-4 col-xs-6 make-bold">Salary rates</p>
+							<p class="col-md-8 col-xs-6" id="salary-rates">None specified</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- third segment -->
+			<div class="row row-group">
+
+				<!-- Work History -->
+				<div class="row dot-divided">
+					<div class="col-md-11 col-md-offset-1">
+						<h2 class="make-bold">Work History</h2>
+						<div class="row">
+							<p class="col-md-4 col-xs-6 make-bold"> Role </p>
+							<p class="col-md-8 col-xs-6"> Your role/post in the company.</p>
+						</div>
+						<div class="row">
+							<p class="col-md-4 col-xs-6 make-bold">Company</p>
+							<p class="col-md-8 col-xs-6">None specified</p>
+						</div>
+						<div class="row">
+							<p class="col-md-4 col-xs-6 make-bold">Dates</p>
+							<p class="col-md-8 col-xs-6">month year to month year</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Education History -->
+				<div class="row dot-divided">
+					<div class="col-md-11 col-md-offset-1">
+						<h2 class="make-bold">Education History</h2>
+						<div class="row">
+							<h3 class="col-md-12 col-xs-6 make-bold">College Name</h3>
+							<h4 class="col-md-12 col-xs-6 make-bold">Degree type</h4>
+							<p class="col-md-12 col-xs-6 make-bold">Degree subject</p>
+							<p class="col-md-12 col-xs-6">month year to month year</p>
+						</div>
+
+						<div class="row">
+							<h3 class="col-md-12 col-xs-6 make-bold">College Name</h3>
+							<h4 class="col-md-12 col-xs-6 make-bold">Degree type</h4>
+							<p class="col-md-12 col-xs-6 make-bold">Degree subject</p>
+							<p class="col-md-12 col-xs-6">month year to month year</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!-- aside block - right side -->
+		<div class="col-md-4 small">
+
+			<!-- first segment -->
+			<div class="row row-group">
+
+				<!-- profile picture row -->
+				<div class="row dot-divided ">
+					<div class="col-md-12" id="available-box">
+						<button id="my-availability" class="btn btn-primary make-flat"style="float:right;margin-top:3px">CHANGE</button>
+						<h4 class="make-bold">MY AVAILABILITY</h4>
+						<span id="my-availability-span">
+							<h2>NOT AVAILABLE</h2>
+						</span>
+					</div>
+				</div>
+
+				<!-- personal statement row -->
+				<div class="row dot-divided">
+					<div class="col-md-11 col-md-offset-1">
+						<h2 class="make-bold">Personal Statement</h2>
+						<p id="personal-statement">Hello</p>
+					</div>
+				</div>
+			</div>
+
+			</div>
+		</div>
+			
+
+
+	</div>
+</div>
+
+
+
+
+
+<!-- modal -->
+<div style="display:nonex" id="mdl-cover">
+	<div id="modal">
+		<div id="mdl-heading">
+			<h2>Notifications</h2>
+			<span id="mdl-hide-span"><h2><i id="mdl-hide" class='fa fa-times-circle'></i></h2></span>
+		</div>
+		<div id="mdl-content">
+			<ul class="list-unstyled">
+				<li class="notifs">Hello added you</li>
+				<li class="notifs">New business oppurtinity with Malcom X</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<!-- footer -->
+<div id="footer-region">
+	<div class="container">
+		<footer class="row">
+
+			<div class="col-xs-3 col-xs-offset-1">
+				<h4>About the company</h4>
+				<ul class="list-unstyled">
+					<li>Name of the company</li>
+					<li>Tagline part-1</li>
+					<li>Tagline part-2</li>
+				</ul>
+			</div>
+
+			<div class="col-xs-3">
+				<h4>Meet Us</h4>
+				<ul class="list-unstyled">
+					<li>email@some.com</li>
+					<li>pho-nenumber</li>
+				</ul>
+			</div>
+
+			<div class="col-xs-3">
+				<h4 class="">Follow us on</h4>
+				<p>
+					<i class="fa fa-facebook-square fa-3x"></i>
+					<span style="float:right"><i class="fa fa-twitter-square fa-3x"></i></span>
+				</p>
+			</div>
+		</footer>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+	(
+		function(){
+			var spaced_elements=document.querySelectorAll('.space');
+			for(var i=0; i<spaced_elements.length; i++){
+				spaced_elements[i].style.marginRight=spaced_elements[i].dataset.space;
+			}
+			function available_steps(){
+				var original=document.querySelector("#available-box").innerHTML;
+				document.querySelector("#my-availability-span").innerHTML="\
+					<br>\
+					<form>\
+						<div class='form-group'>\
+							<label><input type='radio' name='form-available' id='not-available-radio'value=0> NOT AVAILABLE</label>\
+						</div>\
+						<div class='form-group'>\
+							<label><input type='radio' name='form-available' id='available-radio'value=1> AVAILABLE</label>\
+						</div>\
+						<span id='available-span'></span>\
+						<input type='submit' class='btn btn-primary make-flat' id='available-update' value='Update'>\
+						<input type='button' class='btn btn-danger make-flat' id='available-cancel' value='Cancel'>\
+					</form>\
+				";
+
+				document.querySelector("#available-cancel").addEventListener("click",function(){
+					document.querySelector("#available-box").innerHTML=original;
+					document.querySelector("#my-availability").addEventListener("click",available_steps);
+				});
+
+				document.querySelector("#available-radio").addEventListener("click",function(){
+					document.querySelector("#available-span").innerHTML="\
+						<div class='form-group'>\
+							<label>\
+								From:<br>\
+								<input type='text' id='available-from'>\
+									<span class='fa fa-2x fa-calendar'></span>\
+								</input>\
+							</label>\
+						</div>\
+						<div class='form-group'>\
+							<input type='checkbox' id='available-to-check' style='float:right'>\
+							<label style='display: block'>\
+								To:<br>\
+									<span id='available-to-span'></span>\
+								</input>\
+							</label>\
+						</div>\
+					";
+					document.querySelector("#available-to-check").addEventListener("click",function(){
+						if (this.checked) {
+							document.querySelector("#available-to-span").innerHTML="\
+								<input type='text' id='available-to'>\
+									<span class='fa fa-2x fa-calendar'></span>\
+								</input>\
+							";
+							$('#available-to').datepicker({
+								format: 'mm-dd-yyyy'
+							});
+						} else{
+							document.querySelector("#available-to-span").innerHTML="";
+						};
+						
+					});
+					$('#available-from').datepicker({
+						format: 'mm-dd-yyyy'
+					});
+				});
+
+				document.querySelector("#not-available-radio").addEventListener("click",function(){
+					document.querySelector("#available-span").innerHTML="";
+				});
+		
+
+				document.querySelector("#available-update").addEventListener("click",function(e){
+					e.preventDefault();
+					console.log('not-available-radio',	$("#not-available-radio").is(":checked")	);
+					console.log('available-radio', 			$("#available-radio").is(":checked")			);
+					console.log('available-from', 			$("#available-from").val()			);
+					console.log('available-to-check', 	$("#available-to-check").is(":checked")	);
+					console.log('available-to', 				$("#available-to").val()				);
+				});
+
+
+
+			};
+			document.querySelector("#my-availability").addEventListener("click",available_steps);
+
+	})();
+	</script>
+</body>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/notification.js"></script>
+<script src="js/modal.js"></script>
+
+<script src="js/bootstrap-datepicker.js"></script>
+
+</html>
+<!-- 
+user name = profile-name
+checkbox values = {
+	looking-for-fulltime
+	looking-for-interim
+	looking-for-project
+}
+personal statement = personal-statement
+ -->
+
+ <!-- 
+large box type row
+	2 cols: 8, 3
+
+	col-8
+		multiple chunks of rows, implemented by rows
+
+		each chunk-row
+			multiple normal rows for data
+
+			each row
+				cols: (offset)1, ...
+
+				each col=data
+
+  -->
+
+  <script type="text/javascript">
+  </script>

@@ -1,0 +1,42 @@
+
+
+Create a Flask backend for an LLM-powered chatbot that will serve my personal website's chat interface. Here are the requirements:
+Setup & Configuration:
+* Use Flask with CORS enabled for my GitHub Pages frontend
+* Run on port 5000 with host 0.0.0.0
+* Set up proper error handling and logging
+* Store API keys in Replit Secrets (OPENAI_API_KEY)
+RAG Implementation:
+* Create a script to process markdown files from a blog_posts/ folder
+* Use OpenAI's text-embedding-ada-002 for embeddings
+* Store embeddings in ChromaDB or FAISS (lightweight vector database)
+* Implement semantic search to retrieve relevant blog content based on user queries
+* Parse markdown frontmatter to extract metadata (title, categories, date)
+API Endpoints:
+POST /api/chat
+- Accept JSON: {"message": "user query", "timestamp": "ISO string"}
+- Retrieve relevant blog content using RAG
+- Send to OpenAI GPT-4.1 with system prompt about being Nikhil
+
+- Return JSON: {"response": "bot response", "timestamp": "ISO string"}
+
+GET /api/health
+- Return simple health check status
+LLM Integration:
+* Use OpenAI GPT-4.1 API
+* System prompt should include: "You are Nikhil, an AI resident at Accel and poker professional. Use the retrieved blog content to answer questions about AI, investing, poker, and any relevant projects I have written. Keep responses conversational and helpful." 
+- Have a file where I can manually edit the system prompt when needed (add more details to it, tell the bot how to respond etc). Store the system prompt in that file 
+* Include retrieved blog content in the prompt context
+* Limit response length to ~200 words
+Guardrails & Security:
+* Rate limiting: max 10 requests per minute per IP. After that show an error about rate limits
+* Max 10 chats per user. If the user talks too long (tell them to email contact@rnikhil.com to chat directly and that openai credits are expensive)
+* Input validation and sanitization. Think about basic prompt injection and guard railing and dont let people abuse it
+* Content filtering for inappropriate requests. Don’t let the user type NSFW stuff
+* Token usage limits to prevent API abuse
+* Proper error handling for API failures
+* Have basic analytics and logging so that I can see how many people use it, what they chat about, store all the chat logs in a separate folder which I can analyse later. 
+
+Dependencies needed: flask, flask-cors, openai, chromadb (or faiss-cpu), python-frontmatter, numpy, requests and whatever else is needed for the web app
+The frontend expects the backend to be deployed at a Replit URL that it can call via fetch(). Make sure CORS headers allow requests from any origin during development. The frontend is hosted on GitHub pages. You are just making the backend for this chat app
+Create a complete, production-ready backend that I can deploy on Replit

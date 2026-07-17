@@ -1,0 +1,1 @@
+Chrome extension to generate images in the browser. Needs a OpenAI API key to work. Load it manually on the chrome://extensions/ page.

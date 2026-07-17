@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="un" autocomplete="off" autofocus type="text" placeholder="Username"/>
+	  <input id="pd" type="password" placeholder="password"/>
+	  <button>Send</button>
+	  <div></div>
+    </form>
+<script src="https://cdn.socket.io/socket.io-1.2.1.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		var socket = io("http://localhost:3000");
+		$('input').focus(function(){
+		$('div').html('');
+		return false;
+	});
+		$('form').submit(function(){
+		socket.emit('username', $('#un').val());
+		$('#un').val('');
+		return false;
+	});
+	socket.on('pwd', function(){
+		socket.emit('password',$('#pd').val());
+		$('#pd').val('');
+		});
+	socket.on('wru', function(){
+		$('#pd').val('');
+		$('div').html('Wrong username');
+		});
+	socket.on('wrp', function(){
+		$('#pd').val('');
+		$('div').html('Wrong password');
+		});
+	</script>
+  </body>
+</html>

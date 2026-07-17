@@ -1,0 +1,17 @@
+/* Custom styling on top of Bootstrap dark theme */
+.card {
+    margin-bottom: 1rem;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.card-header {
+    background-color: var(--bs-dark);
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+canvas {
+    max-height: 300px;
+}

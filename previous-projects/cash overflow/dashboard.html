@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>&lt;websitename&gt; | Dashboard</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<script src="js/jquery-1.11.1.min.js"></script>
+
+
+</head>
+<body>
+
+
+<div id="main-box">
+	<div class="container">
+
+		<!-- navigation bar -->
+		<nav id="main-nav" class="navbar navbar-default navbar-fixed-top make-flat">
+		  <div class="container"><!-- centers the content -->
+
+			<!-- ombile-first layout -->
+			<div class="navbar-header">
+			  <button id="hamburger" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">WEBSITEname</a>
+			</div>
+
+			<!-- navbar contents -->
+			<div id="navbar" class="navbar-collapse collapse">
+			  
+			  <!-- right-half of navbar -->
+			  <ul class="nav navbar-nav navbar-right">
+			  
+
+				<!-- menu item-1 -->
+				<li><a href="#">Dashboard</a></li>				
+
+
+				<!-- menu item-2 -->
+				<li><a href="#">Case Studies</a></li>			
+
+
+				<!-- menu item-3 -->
+				<li class="dropdown">											
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Advice <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Ask a pro</a></li>
+					<li class="divider"></li>
+					<li class="dropdown-header">Nav sub-header</li>
+					<li><a href="#">Some more things</a></li>
+				  </ul>
+				</li>
+
+
+				<!-- menu item-4 -->
+				<li><a href="#" class="mdl-show">Help</a></li>							
+
+
+				<!-- menu item-5 -->
+				<li> <a href="#" class="mdl-show"> <span id="notif-count"></span> Notifications </a> </li>
+
+
+				<!-- menu item-6 -->
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> &lt;USER&gt; <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Dashboard</a></li>
+					<li><a href="#">Edit profile</a></li>
+					<li><a href="#">Change password</a></li>
+					<li><a href="#">Logout</a></li>
+				  </ul>
+				</li>
+
+				<!-- menu item-7 -->
+				<li>
+							<div class="btn-group">
+								<a 			type="button" class="btn btn-xs make-flat btn-success navbar-btn" href="#">Post Project</a>
+							  <button type="button" class="btn btn-xs make-flat btn-success navbar-btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+
+								<ul class="dropdown-menu">
+									<li><a href="#">Business Plan</a></li>
+									<li><a href="#">Company Valuation</a></li>
+									<li><a href="#">Competitive Analysis</a></li>
+									<li><a href="#">Financial Projections &amp; Analysis</a></li>
+									<li><a href="#">Market Analysis &amp; Research</a></li>
+									<li><a href="#">Marketing Collateral</a></li>
+									<li><a href="#">Marketing Plan</a></li>
+									<li><a href="#">New Market Entry Plan</a></li>
+									<li><a href="#">Performance Metrics &amp; Benchmarks</a></li>
+									<li><a href="#">Pitch Deck</a></li>
+									<li><a href="#">Pricing Analysis &amp; Advice</a></li>
+									<li><a href="#">Social Media Advisory</a></li>
+									<li><a href="#">Other</a></li>
+								</ul>
+							</div>	
+				</li>
+
+
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+
+
+		<div class="row">
+
+			<!-- My Profile -->
+			<div class = "col-md-3 bordered-box no-padding">
+
+				<div class="header col-md-12">
+					<p style="display:hidden; clear:both"></p>
+					<div style="float:right">
+						<a href="#">Edit</a> | <a href="#">View</a>
+					</div>
+					<h4>My Profile</h4>
+				</div>
+
+				<div class="row" style="padding-left:15px">
+					<div class="col-xs-4">
+						<img src="img/1.png" class="img-rounded img-responsive">
+					</div>
+
+					<div class="col-xs-6 col-xs-offset-1">
+						<h4>None</h4>
+						<h4 class=" profile-complete">0%</h4>
+						<p>Profile complete</p>
+						<div class="progress">
+							<div class="progress-bar profile-complete" style="width:50%"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class = "col-md-8 col-sm-offset-1 bordered-box no-padding" style="min-height:217px">
+		    <ul class="nav nav-tabs justified nav-justified">
+		      <li class="active"><a href="#my-projects" id="my-projects-tab" data-toggle="tab"  >My Projects (0)</a></li>
+		      <li>               <a href="#bench" id="bench-tab" data-toggle="tab" >Consultant Bench (0)</a></li>
+		    </ul>
+
+		    <div class="tab-content">
+		      <div class="tab-pane active" id="my-projects" >
+	          <div class="text-center get-started">
+	            <h2>Get started today.</h2>
+	            <div class="btn-group btn-group-lg">
+	              <button type="button" class="btn btn-primary btn-lg dropdown-toggle make-flat" data-toggle="dropdown"> Select project type <i class="fa fa-angle-down"></i></button>
+	              <ul class="dropdown-menu">
+	                <li><a href="#">Business Plan</a></li>
+	                <li><a href="#">Company Valuation</a></li>
+	                <li><a href="#">Competitive Analysis</a></li>
+	                <li><a href="#">Financial Projections &amp; Analysis</a></li>
+	                <li><a href="#">Market Analysis &amp; Research</a></li>
+	                <li><a href="#">Marketing Collateral</a></li>
+	                <li><a href="#">Marketing Plan</a></li>
+	                <li><a href="#">New Market Entry Plan</a></li>
+	                <li><a href="#">Performance Metrics &amp; Benchmarks</a></li>
+	                <li><a href="#">Pitch Deck</a></li>
+	                <li><a href="#">Pricing Analysis &amp; Advice</a></li>
+	                <li><a href="#">Social Media Advisory</a></li>
+	                <li><a href="#">Other</a></li>
+	              </ul>
+	          	</div>
+	          	<h4 class="btn-group hidden-xs"> or </h4>
+	          	<a href="#" class="btn-group btn btn-success btn-lg make-flat">Post a custom project</a>
+	            <br><br>
+	            <p>Questions? <span class="nowrap"><a href="#">Contact us</a> or call <a href="tel:6174463734">617-44-NERD-4</a></span></p>
+	          </div>
+		      </div>
+		      <div class="tab-pane" id="bench" >
+		        
+		      </div>
+		    </div>
+			</div>
+		</div>
+
+		<div class="row bordered-box">
+			<div class="header col-md-12">
+				<h4 style="display:inline-block;">Something(s) showcased</h4>
+				|
+				<a href="#" style="display:inline-block;">View all</a>
+			</div>
+
+			<div class="col-xs-4 has-img-rollover">
+				<img src="img/2.jpg" class="img-responsive">
+				<div class="text-center img-rollover">
+					<h4> Title of image</h4>
+					<p>Some description<br>Brief and as small as possible.</p>
+				</div>
+			</div>
+
+			<div class="col-xs-4 has-img-rollover">
+				<img src="img/2.jpg" class="img-responsive">
+				<div class="text-center img-rollover">
+					<h4> Title of image</h4>
+					<p>Some description<br>Brief and as small as possible.</p>
+				</div>
+			</div>
+
+			<div class="col-xs-4 has-img-rollover">
+				<img src="img/2.jpg" class="img-responsive">
+				<div class="text-center img-rollover">
+					<h4> Title of image</h4>
+					<p>Some description<br>Brief and as small as possible.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row bordered-box"></div>
+
+	</div>
+
+</div>
+
+
+<!-- modal -->
+<div style="display:nonex" id="mdl-cover">
+	<div id="modal">
+		<div id="mdl-heading">
+			<h2>Notifications</h2>
+			<span id="mdl-hide-span"><h2><i id="mdl-hide" class='fa fa-times-circle'></i></h2></span>
+		</div>
+		<div id="mdl-content">
+			<ul class="list-unstyled">
+				<li class="notifs">Hello added you</li>
+				<li class="notifs">New business oppurtinity with Malcom X</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<!-- footer -->
+<div id="footer-region">
+	<div class="container">
+		<footer class="row">
+
+			<div class="col-xs-3 col-xs-offset-1">
+				<h4>About the company</h4>
+				<ul class="list-unstyled">
+					<li>Name of the company</li>
+					<li>Tagline part-1</li>
+					<li>Tagline part-2</li>
+				</ul>
+			</div>
+
+			<div class="col-xs-3">
+				<h4>Meet Us</h4>
+				<ul class="list-unstyled">
+					<li>email@some.com</li>
+					<li>pho-nenumber</li>
+				</ul>
+			</div>
+
+			<div class="col-xs-3">
+				<h4 class="">Follow us on</h4>
+				<p>
+					<i class="fa fa-facebook-square fa-3x"></i>
+					<span style="float:right"><i class="fa fa-twitter-square fa-3x"></i></span>
+				</p>
+			</div>
+		</footer>
+	</div>
+</div>
+
+
+</body>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/notification.js"></script>
+<script src="js/modal.js"></script>
+
+<script type="text/javascript">
+	var recieved_profile_percentage=10;
+	var x = document.querySelectorAll('.profile-complete');
+	x[0].innerHTML=recieved_profile_percentage+"%";
+	x[1].style.width=recieved_profile_percentage+"%";
+
+	var hasImgRollover=document.querySelectorAll(".has-img-rollover img");
+	var imgRollovers=document.querySelectorAll(".img-rollover");
+	window.onresize=function(){
+		for(var i=0; i<hasImgRollover.length; i++){
+			imgRollovers[i].style.width=hasImgRollover[i].width+"px";
+		}	
+	}
+	for(var i=0; i<hasImgRollover.length; i++){
+		imgRollovers[i].style.width=hasImgRollover[i].width+"px";
+	}	
+</script>
+
+
+
+		<style type="text/css">
+			.bordered-box{
+				background-color: #fff;
+				border: 1px solid #ddd;
+				min-height: 100px;
+			}
+			.row{
+				margin-bottom: 20px;
+			}
+			.header{
+				border-bottom: 2px solid #eee; 
+				margin-bottom:20px;
+			}
+			.nav-tabs > li > a{
+					border: none!important;
+				}
+			.nav-tabs{
+				background: linear-gradient(white, #ddd);
+			}
+			.no-padding{
+				padding: 0;
+			}
+			.has-img-rollover{
+				overflow: hidden;
+				position: relative;
+			}
+			.img-rollover{
+				background: linear-gradient(transparent, rgba(0, 0, 0, 1) );
+				color: white;
+				height: 100%;
+				position: absolute;
+				bottom: -100%;
+				transition: bottom 500ms;
+				width: 92%;
+				padding: 0 5px;
+			}
+			.has-img-rollover:hover .img-rollover{
+				bottom: 0;
+
+			}
+		</style>
+</script>
+</html>

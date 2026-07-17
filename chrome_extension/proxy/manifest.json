@@ -1,0 +1,16 @@
+{
+    "name": "Proxy the BITCH",
+    "version": "1",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "scripts": ["content.js","url.js"]
+    },
+	"content_scripts": [ {
+  "matches": ["<all_urls>"],
+  "js": ["url.js"]
+} ],
+    "permissions": ["tabs"],
+    "manifest_version": 2
+}

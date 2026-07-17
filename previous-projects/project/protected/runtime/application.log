@@ -1,0 +1,320 @@
+2014/12/17 15:04:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('expert/view')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\project\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/project/index.php?r=expert/view
+---
+2014/12/18 15:06:48 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.search.models" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\wamp\www\yii\framework\gii\generators\crud\CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#5 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\project\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/project/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/project/index.php?r=gii/crud/index
+---
+2014/12/18 15:06:59 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.search" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\wamp\www\yii\framework\gii\generators\crud\CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#5 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\project\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/project/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/project/index.php?r=gii/crud/index
+---
+2014/12/18 15:09:50 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.search.models.search" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\wamp\www\yii\framework\gii\generators\crud\CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#5 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\project\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/project/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/project/index.php?r=gii/crud/index
+---
+2014/12/18 15:10:11 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.search.models" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\wamp\www\yii\framework\gii\generators\crud\CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#5 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\project\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/project/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/project/index.php?r=gii/crud/index
+---
+2014/12/18 15:11:57 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.search.models.search" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\wamp\www\yii\framework\gii\generators\crud\CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#5 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\project\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/project/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/project/index.php?r=gii/crud/index
+---
+2014/12/18 15:13:11 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.search.models.model" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\wamp\www\yii\framework\gii\generators\crud\CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#5 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\project\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/project/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/project/index.php?r=gii/crud/index
+---
+2014/12/18 15:13:24 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.search" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\wamp\www\yii\framework\gii\generators\crud\CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#5 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\project\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/project/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/project/index.php?r=gii/crud/index
+---
+2014/12/18 15:15:31 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.search.models.Expert" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\wamp\www\yii\framework\gii\generators\crud\CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#5 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\project\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/project/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/project/index.php?r=gii/crud/index
+---
+2014/12/18 15:15:37 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.search.models.expert" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\wamp\www\yii\framework\gii\generators\crud\CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#5 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\project\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/project/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/project/index.php?r=gii/crud/index
+---
+2014/12/18 15:20:19 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.search.models.Expert.Default" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:322
+Stack trace:
+#0 C:\wamp\www\yii\framework\gii\generators\crud\CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(159): CModel->validate()
+#5 C:\wamp\www\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#12 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\project\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/project/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost/project/index.php?r=gii/crud/index
+---
+2014/12/18 15:30:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "expert".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('expert')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\project\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/project/index.php?r=expert
+---
+2014/12/18 15:38:22 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "expert/index.php".' in C:\wamp\www\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('expert/index.ph...', NULL, true)
+#1 C:\wamp\www\project\protected\modules\search\controllers\DefaultController.php(7): CController->render('expert/index.ph...')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('search')
+#8 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\project\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/project/index.php?r=search
+---
+2014/12/18 15:38:22 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "expert/index.php".' in C:\wamp\www\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('expert/index.ph...', NULL, true)
+#1 C:\wamp\www\project\protected\modules\search\controllers\DefaultController.php(7): CController->render('expert/index.ph...')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('search')
+#8 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\project\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/project/index.php?r=search
+---
+2014/12/18 15:38:40 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "expert".' in C:\wamp\www\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('expert', NULL, true)
+#1 C:\wamp\www\project\protected\modules\search\controllers\DefaultController.php(7): CController->render('expert')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('search')
+#8 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\project\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/project/index.php?r=search
+---
+2014/12/18 15:40:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('search')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\project\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/project/index.php?r=search
+---
+2014/12/18 15:41:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('search')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\project\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/project/index.php?r=search
+---
+2014/12/18 17:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "demo".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('demo')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('demo')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('search/expert/d...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\project\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/project/index.php?r=search/expert/demo
+---
+2014/12/18 18:06:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "zii".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('zii')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\project\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/project/index.php?r=zii
+---
+2014/12/19 09:39:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "searcg".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('searcg')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\project\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/project/index.php/searcg
+---
+2014/12/19 09:39:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/espert".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('search/espert')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\project\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/project/index.php/search/espert
+---
